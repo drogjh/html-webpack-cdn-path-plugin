@@ -49,7 +49,7 @@ CdnPathWebpackPlugin.prototype.apply = function (compiler) {
           hash: hash
         })
 
-        let runtimePublicPath = self.runtimeCdnPath.length == 1 ? `${self.runtimeCdnPath[0]}`
+        let runtimePublicPath = self.runtimeCdnPath.length == 1 ? `'${self.runtimeCdnPath[0]}'`
           : `${JSON.stringify(self.runtimeCdnPath)}[Math.floor((Math.random()*${self.runtimeCdnPath.length}))]`
         runtimePublicPath += `+'${publicPath}'`
 
