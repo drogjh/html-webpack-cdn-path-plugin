@@ -26,9 +26,9 @@ module.exports = {
     },
     plugins: [
         new CdnPathWebpackPlugin({
-              runtimeCdnPath: ['//cdn1.static.com','//cdn2.static.com'],
-	      assetsJsCdnPath: ['//cdn1.static.com','//cdn2.static.com'],
-	      assetsCssCdnPath: ['//cdn1.static.com','//cdn2.static.com'],
+            runtimeCdnPath: ['//cdn1.static.com','//cdn2.static.com'],
+            assetsJsCdnPath: ['//cdn1.static.com','//cdn2.static.com'],
+            assetsCssCdnPath: ['//cdn1.static.com','//cdn2.static.com'],
 	    })
     ]
 }
