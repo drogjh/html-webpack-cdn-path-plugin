@@ -9,6 +9,14 @@ function CdnPathWebpackPlugin(options) {
   // 构造生成html使用的资源
   this.assetsJsCdnPath = options && options.assetsJsCdnPath
   this.assetsCssCdnPath = options && options.assetsCssCdnPath
+
+  if (
+    (this.runtimeCdnPath && !Array.isArray(this.runtimeCdnPath))
+    || (this.assetsJsCdnPath && !Array.isArray(this.assetsJsCdnPath))
+    || (this.assetsCssCdnPath && !Array.isArray(this.assetsCssCdnPath))
+  ) {
+    throw new Error('runtimeCdnPath,assetsJsCdnPath,assetsCssCdnPath must be an array')
+  }
 }
 
 CdnPathWebpackPlugin.prototype.apply = function (compiler) {
